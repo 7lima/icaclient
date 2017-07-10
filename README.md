@@ -1,46 +1,65 @@
-# Citrix ICA-Client
-_Citrix ICA Client Plugin bundled with Mozilla Firefox_
+# Citrix ICA-Client - VDS der Deutschen Bahn
+_Citrix ICA Client-Plugin in Verbindung mit Mozilla Firefox_
 
-Citrix icaclient is a terribly bad designed an terribly bad
-implemented tool for remote desktop connections. It is a 32-bit
-Firefox plugin, even on 64-bit Linux systems, so it corrupts your
-operating system, or at least your Firefox installation. Even then, it
-need fixes and most of the time, it does not work.  Still I have to
-use it on work. So I want to run it in a well defined environment:
-Encapsulate in a docker container.
+Diese containerisierte Lösung basiert auf dem
+[Citrix ICA Client-Plugin von MarvAmBass](https://github.com/DesktopContainers/icaclient)
+und ist vorkonfiguriert,
+sich mit dem VDS-Service (Virtual Desktop Service) der
+[Deutschen Bahn](http://www.bahn.de/)
+zu verbinden.
 
-It's based on __DesktopContainers/base-debian__
+## Lizenzen
+Um diese Lösung rechtmäßig zu nutzen,
+müssen die Lizenzen der enthaltenen Software-Komponenten akzeptiert werden.
 
-## ICA-Client License
+Der Citrix ICA-Client unterliegt der Lizenz _Citrix License Agreement_,
+deren Inhalt mit Stand mit Stand 2017-07-10
+in der Datei `LICENSE` hinterlegt ist.  
+Alle Informationen dazu von Seiten [Citrix](https://www.citrix.com/)
+sowie der originale Citrix ICA-Client
+können von
+[deren Website](https://www.citrix.com/downloads/citrix-receiver/linux/receiver-for-linux-latest.html)
+heruntergeladen werden.
 
-The `CITRIX RECEIVER LICENSE AGREEMENT` is stored in file `LICENSE`.
-You must accept the `LICENSE` if you use this docker container.
+Für den
+[Mozilla Firefox](https://www.mozilla.org/de/firefox/new/)
+gilt eine
+[Open-Source-Lizenz](https://www.mozilla.org/en-US/MPL/).
 
-You could also download the client from:
+## Zugriff auf den VDS-Service
+Die Deutsche Bahn stellt eine
+[öffentliche Adresse](https://vds.service.deutschebahn.com/Citrix/XenAppWeb/)
+zum Zugriff auf ihren VDS-Service per Browser zur Verfügung.
+Der Zugriff ist ausschließlich für Mitarbeiter der Deutschen Bahn gestattet
+und setzt für den Benutzer eine Kennung
+sowie die Freischaltung weiterer Zugriffsmechanismen voraus.
 
-https://www.citrix.com/downloads/citrix-receiver/linux/receiver-for-linux-latest.html
+## Vorbereitung
+Voraussetzung für den Betrieb dieser Lösung
+ist [die Containerisierungs-Infrastruktur Docker](http://www.docker.com/),
+die für Linux, macOS und MS Windoze
+[zur Verfügung steht](https://store.docker.com/search?type=edition&offering=community).
 
-## Environment variables and defaults
+Zum Starten des
+[Containers](https://hub.docker.com/r/7lima/icaclient/)
+benötigt man die
+[Startscripts](https://github.com/7lima/icaclient/),
+die von einer UNIX-Shell aus per Git-Kommando
 
-* __WEB\_URL__
- * specify the url the browser will point to by default e.g. the citrix login portal url
+	$ git clone https://github.com/7lima/icaclient.git
+heruntergeladen werden können.
 
-## Usage: Run the Client
+## Starten des Citrix ICA-Clients
+Man wechselt in einer UNIX-Shell in das durch Git angelegte Verzeichnis,
+in dem das Startscript `icaclient.sh` liegt,
+und startet dann den Citrix ICA-Client mit:
 
-### Simple SSH X11 Forwarding
+	$ sudo sh icaclient.sh
+(Ist der UNIX-Benutzer so konfiguriert,
+daß er der Benutzergruppe `docker` angehört,
+kann das `sudo` entfallen.)
 
-Since it is an X11 GUI software, usage is in two steps:
-  1. Run a background container as server or start existing one.
-
-        docker start icaclient || docker run -d --name icaclient \
-        -e 'WEB_URL=https://github.com' desktopcontainers/icaclient
-        
-  2. Connect to the server using `ssh -X` (as many times you want). 
-     _Logging in with `ssh` automatically opens a firefox window_
-
-        ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
-        -X app@$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' icaclient)
-        
-  3. Browse to your ICA service, start the client and enjoy.
-
-You can configure firefox and set bookmarks. As long as you don't remove the container and you reuse the same container, all your changes persist. You could also tag and push your configuration to a registry to backup (should be your own private registry for your privacy).
+Es öffnet sich dann ein Browserfenster,
+in dem nach erfolgreichem Authentifizierungsvorgang
+der VDS-Desktop und weitere VDS-Applikationen
+in für DB-Mitarbeiter gewohnter Weise zur Verfügung stehen.
