@@ -10,6 +10,7 @@ Sie basiert auf dem
 Als Benutzerschnittstelle dient der Mozilla Firefox,
 in dem das ICA-Client-Plugin ausgeführt wird,
 um eine VDS-Oberfläche anzuzeigen.
+Diese Lösung ist nur für Mitarbeiter der Deutschen Bahn einsetzbar.
 
 ## Lizenzen
 Um diese Lösung rechtmäßig zu nutzen,
