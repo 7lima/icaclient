@@ -72,3 +72,28 @@ Es öffnet sich dann ein Browserfenster,
 in dem nach erfolgreichem Authentifizierungsvorgang
 der VDS-Desktop und weitere VDS-Applikationen
 in für DB-Mitarbeiter gewohnter Weise zur Verfügung stehen.
+
+## Beenden
+Wird eine der VDS-Applikationen beendet,
+so bleibt das Browserfenster mit der VDS-Oberfläche weiterhin geöffnet.
+Dasselbe gilt für das Beenden des VDS-Desktops.
+Jedoch kann es sein,
+daß der Benutzer aufgrund einer Zeitüberschreitung
+automatisch abgemeldet wird.
+Diese Vorgänge sind das Standard-Verhalten von VDS.
+
+Will man die Sitzung selbst beenden,
+so schließt man einfach das Browserfenster.
+
+Zum Beenden des Containers kann man folgendes Script benutzen:
+
+	$ sudo sh stop.sh
+
+## Persistenz
+Der Zustand des Browsers und dessen Einstellungen bleiben erhalten,
+solange der Container nicht gelöscht wird.
+
+Die Persistenz einer VDS-Sitzung
+verhält sich wie durch das Citrix ICA-Client-Plugin vorgegeben.
+Eine Sitzung auf dem VDS-Desktop kann also persistent bleiben,
+wenn man sich von der Sitzung nur trennt und sie nicht beendet.
