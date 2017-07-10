@@ -48,6 +48,8 @@ die von einer UNIX-Shell aus per Git-Kommando
 
 	$ git clone https://github.com/7lima/icaclient.git
 heruntergeladen werden können.
+Dieses Kommando legt ein neues Unterverzeichnis an
+und legt die Dateien dort ab.
 
 ## Starten des Citrix ICA-Clients
 Man wechselt in einer UNIX-Shell in das durch Git angelegte Verzeichnis,
