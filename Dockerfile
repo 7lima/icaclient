@@ -1,5 +1,4 @@
-# Dockerfile fuer Citrix-ICAClient-Container
-# Deutsche Bahn DB Systel, Projekt DSR
+# Dockerfile fuer Citrix ICA-Client-Container
 #
 # Heiko Graeber, 2017-07-05
 #		 2017-07-07
