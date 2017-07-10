@@ -1,6 +1,6 @@
 # Dockerfile fuer Citrix ICA-Client-Container
 #
-# Heiko Graeber, 2017-07-05
+# Heiko G.,	 2017-07-05
 #		 2017-07-07
 
 FROM	desktopcontainers/icaclient             
