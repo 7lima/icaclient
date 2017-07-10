@@ -17,7 +17,7 @@ müssen die Lizenzen der enthaltenen Software-Komponenten akzeptiert werden.
 
 Der Citrix ICA-Client unterliegt der Lizenz _Citrix License Agreement_,
 deren Inhalt mit Stand mit Stand 2017-07-10
-in der Datei `LICENSE` hinterlegt ist.  
+in der Datei `LICENSE` hinterlegt ist.
 Alle Informationen dazu von Seiten [Citrix](https://www.citrix.com/)
 sowie der originale Citrix ICA-Client
 können von
@@ -32,7 +32,7 @@ gilt eine
 ## Zugriff auf den VDS-Service
 Die Deutsche Bahn stellt eine
 [öffentliche Adresse](https://vds.service.deutschebahn.com/Citrix/XenAppWeb/)
-zum Zugriff auf ihren VDS-Service per Browser zur Verfügung.
+zum Zugriff auf ihren VDS-Service zur Verfügung.
 Der Zugriff ist ausschließlich für Mitarbeiter der Deutschen Bahn gestattet
 und setzt für den Benutzer eine Kennung
 sowie die Freischaltung weiterer Zugriffsmechanismen voraus.
