@@ -1,5 +1,5 @@
 # Citrix ICA-Client - VDS der Deutschen Bahn
-_Citrix ICA Client-Plugin in Verbindung mit Mozilla Firefox_
+_Citrix ICA-Client-Plugin in Verbindung mit Mozilla Firefox_
 
 Diese containerisierte Lösung basiert auf dem
 [Citrix ICA Client-Plugin von MarvAmBass](https://github.com/DesktopContainers/icaclient)
@@ -7,6 +7,9 @@ und ist vorkonfiguriert,
 sich mit dem VDS-Service (Virtual Desktop Service) der
 [Deutschen Bahn](http://www.bahn.de/)
 zu verbinden.
+Als Benutzerschnittstelle dient der Mozilla Firefox,
+in dem das ICA-Client-Plugin ausgeführt wird,
+um eine VDS-Oberfläche anzuzeigen.
 
 ## Lizenzen
 Um diese Lösung rechtmäßig zu nutzen,
