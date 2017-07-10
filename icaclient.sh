@@ -24,7 +24,7 @@ else						# sonst per docker
 	sudo docker start $NAME 		|| \
 	sudo docker run --name $NAME 	   	   \
 		-e WEB_URL	  		   \
-		desktopcontainers/$NAME
+		7lima/$NAME
 	CONT=`sudo docker ps -q -f name"=$NAME" | tail -n 1`
 						# ID des Containers
 fi || exit
