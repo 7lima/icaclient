@@ -6,14 +6,14 @@ sich mit dem VDS-Service (Virtual Desktop Service) der
 [Deutschen Bahn](http://www.bahn.de/)
 zu verbinden.
 Sie basiert auf dem
-[Citrix ICA Client-Plugin von MarvAmBass](https://github.com/DesktopContainers/icaclient)
+[Citrix ICA-Client-Plugin von MarvAmBass](https://github.com/DesktopContainers/icaclient).
 Als Benutzerschnittstelle dient der Mozilla Firefox,
 in dem das ICA-Client-Plugin ausgeführt wird,
 um eine VDS-Oberfläche anzuzeigen.
 
 ## Lizenzen
 Um diese Lösung rechtmäßig zu nutzen,
-müssen die Lizenzen der enthaltenen Software-Komponenten akzeptiert werden.
+müssen die Lizenzen der enthaltenen Software-Komponenten befolgt werden.
 
 Der Citrix ICA-Client unterliegt der Lizenz _Citrix License Agreement_,
 deren Inhalt mit Stand mit Stand 2017-07-10
@@ -23,7 +23,7 @@ sowie der originale Citrix ICA-Client
 können von
 [deren Website](https://www.citrix.com/downloads/citrix-receiver/linux/receiver-for-linux-latest.html)
 heruntergeladen werden.
-Siehe auch die [Angaben von MarvAmBass zu diesem Thema.](https://github.com/DesktopContainers/icaclient#ica-client-license)
+Siehe auch die [Angaben von MarvAmBass zu diesem Thema](https://github.com/DesktopContainers/icaclient#ica-client-license).
 
 Für den
 [Mozilla Firefox](https://www.mozilla.org/de/firefox/new/)
