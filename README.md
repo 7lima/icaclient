@@ -97,3 +97,8 @@ Die Persistenz einer VDS-Sitzung
 verhält sich wie durch das Citrix ICA-Client-Plugin vorgegeben.
 Eine Sitzung auf dem VDS-Desktop kann also persistent bleiben,
 wenn man sich von der Sitzung nur trennt und sie nicht beendet.
+
+## Debugging
+
+        $ sudo sh -x icaclient.sh
+        $ sudo sh -x      stop.sh
