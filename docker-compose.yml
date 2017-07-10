@@ -1,0 +1,15 @@
+# docker-compose.yml fuer Citrix-ICAClient-Container
+# Deutsche Bahn DB Systel, Projekt DSR
+#
+# Heiko Graeber, 2017-07-07
+
+version: "2"
+services:
+  icaclient:
+    build:          .
+    image:          7lima/icaclient
+#   container_name: icaclient
+#   network_mode:   host
+#   privileged:     true
+    environment:
+    - WEB_URL                                   # weiterreichen
