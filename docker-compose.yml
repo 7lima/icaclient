@@ -23,3 +23,6 @@ services:
     image:          desktopcontainers/icaclient
     labels:
       maintainer:   Heiko G. (https://github.com/7lima)
+    ports:
+    - 80
+    - 5901
