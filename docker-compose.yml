@@ -2,14 +2,24 @@
 # Deutsche Bahn DB Systel, Projekt DSR
 #
 # Heiko G.,      2017-07-07
+#		 2017-07-11
 
 version: "2"
 services:
   icaclient:
-    build:          .
-    image:          7lima/icaclient
+#   build:
+#     context:      .
+#     args:
+#       WEB_URL:                                # weiterreichen
+#   image:          7lima/icaclient
+#   image:          7lima/icaclient:latest
+
 #   container_name: icaclient
 #   network_mode:   host
 #   privileged:     true
     environment:
-    - WEB_URL                                   # weiterreichen
+#     WEB_URL:                                  # weiterreichen
+      WEB_URL:      https://vds.service.deutschebahn.com/Citrix/XenAppWeb/
+    image:          desktopcontainers/icaclient
+    labels:
+      maintainer:   Heiko G. (https://github.com/7lima)
