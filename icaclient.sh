@@ -1,8 +1,8 @@
 #!/bin/sh
 #
 # icaclient.sh
-# Containerisierten Citrix-ICA-Client-Container sowie eine Sitzung mit oder
-# ohne Docker Compose starten
+# Containerisierten Citrix-ICA-Client-Container mit oder ohne Docker Compose
+# sowie eine Sitzung starten
 #
 # Deutsche Bahn DB Systel, Projekt DSR
 #
