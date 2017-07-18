@@ -10,10 +10,13 @@
 # Heiko G.,      2017-07-07
 #		 2017-07-10
 #		 2017-07-11
+#		 2017-07-18
 
 export WEB_URL
 WEB_URL=https://vds.service.deutschebahn.com/Citrix/XenAppWeb/
 NAME=icaclient
+
+cd `dirname "$0"` || exit			# hier liegt docker-compose.yml
 
 if
 	sudo docker-compose --help >/dev/null	# ist es installiert?
